@@ -1,0 +1,86 @@
+
+:root{
+    --w: calc(70vw / 6);
+    --h: calc(50vw / 4);
+}
+
+*{
+    transition: all 0.5s;
+}
+
+body{
+    padding:0;
+    margin:0;
+    background-color: powderblue;
+}
+
+h1{
+    padding-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.area-tarjeta, .tarjeta, .cara{
+    width: var(--w);
+    min-width: 80px;
+    height: var(--h);
+}
+
+.tarjeta{
+    position: relative;
+    transform-style: preserve-3d;
+}
+/*
+.area-tarjeta:hover .tarjeta{
+    transform: rotateY(180deg);
+}
+*/
+.cara{
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 0 10px white;
+    font-size: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trasera{
+    background-color: lightcyan;
+    transform: rotateY(180deg);
+}
+
+.superior{
+    background: linear-gradient(orange, darkorange);
+}
+
+.row{
+    margin-bottom: 20px;
+}
+
+#empezar{
+    margin-bottom: 20px;
+    box-shadow: 0 0 0 2px darkorange;
+}
+
+#empezar:hover{
+    box-shadow: 0 0 0 2px orange;
+    background-color: darkorange;
+}
+
+.activo:hover{
+    cursor: pointer;
+}
+
+.acierto{
+    border: 5px solid; /* Ancho del borde */
+    border-image: linear-gradient(gold, rgb(49, 187, 49)) 1;
+}
+
+.error{
+    border: 5px solid red;
+}
+
+#fin-juego{
+    display: none;
+}
+
